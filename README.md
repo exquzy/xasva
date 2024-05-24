@@ -1,94 +1,119 @@
-😎SwagMode:
-loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
+local player = game.Players.LocalPlayer
+local camera = game.Workspace.CurrentCamera
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/dylannpro123/enclosed/main/enclosed'))()
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Scrvpter/Pluto/Lua/Loader.Lua', true))()
-
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/PolarWasHere/Arctic/main/Arctic"))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Zinzs/luascripting/main/canyoutellitsadahoodscriptornot.lua"))()
-
-getgenv().Toggle = "v"
-getgenv().Intro = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NoUGotbannedlol/DaHubV3/main/Launch"))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/spacexrandom/Lua/main/DaHood", true))()
-
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
-
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/nyulachan/nyula/main/nyuladhm"))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
-
-loadstring(game:HttpGet("https://pastebin.com/raw/mHfK0Xk4", true))()
-
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Syntaxx64/HomebrewAdmin/master/Main"))()
+local function lookDown()
+    
+    local lookDownCFrame = CFrame.new(camera.CFrame.Position) * CFrame.Angles(math.rad(-90), 0, 0)
+    camera.CFrame = lookDownCFrame
+end
 
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/FD2Team/Nameless-Admin-No-Byfron-Kick/main/Source",true))()
+game:GetService("RunService").RenderStepped:Connect(lookDown)
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/1/main/bot'))()
+getgenv()._=
+"This script made by xk5ng | If you pay for this script you get scammed, this script is completely free ok https://discord.gg/msgabv2t9Q | https://discord.gg/stando"
+--[[To get started in "OWNER" put the username you want to control and in "STAND" put the StandUsername aka AltUsername.
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V2/main/Resources/Scripts/Aimbot%20V2%20GUI.lua"))()
+// Example \\
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
+getgenv().Accounts = {OWNER = 'xk5ng', STAND = "4k7nz"} This is just the example dont put the username here ]]
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Silly-E xploiter/NamedAdmin/main/bamed%20admen.txt'))()
+--\\-- Accounts --//--
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+getgenv().Accounts = {OWNER = 'kittyeater694', STAND = "dangertosociety69"
+--\\-- Stand-Configuration --//--
 
-loadstring(game:HttpGet("https://pastebin.com/raw/3WmkdKes"))()
+getgenv().StandConfig = {
+    --\\-- ! Main ! --//--
+    ['Position'] = 'Right', --Position Of Stand [Back | Left | Right]
+    ['CrewID'] = 32570691, --Must Be In Group For It To Work
+    ['Attack'] = 'Heavy', --Heavy = Super Punch Light = Spam Punch [Heavy | Light]
+    ['StandMode'] = 'King Crimson', --[Star Platinum : OverHeaven | Star Platinum: The World | Star Platinum, Za Warudo! | TheWorld | Cmoon | King Crimson | Killer Queen | MIH | D4C]
+    ['FlyMode'] = 'Heaven', --[Glide | FlyV1 | FlyV2 | Hover | Heaven ]
+    ['Pred'] = 0.34, --Prediction For Attack Or Targetting
+    ['AutoPred'] = 0.23, --Prediction For Attack Or Targetting
+    ['GunPred'] = 0.037, --Gun prediction [this is auto prediction sets]
+    ['AutoPredic'] = false, --[true | false] Turn On Or Off Auto Prediction 
+    ['AttackMode'] = 'Under', --[Sky | Under] If [Sky] The Stand Will Attack Infront Of Target And If [Under] The Stand Will Attack In Underground
+    ['GunMode'] = 'Sky', --[Sky | Under]  The Stand Will Shooting Just Like What In The Settings
+    ['GunType'] = 'Lmg', --[Lmg | Aug]  The Stand Will Shooting Just Like What In The Settings
+    ['Resolver'] = false, --[true | false] Turn On Or Off Resolver If Someone Using Anti Lock
+    --\\-- ! Antilock ! --//--
+    ['SkyAmount'] = 1600, --Sky Velocity
+    --\\-- ! Misc ! --//--
+    ['AutoSaveLocation'] = '1', --[1 | 2]. '1' is bank food shop rooftop, '2' is "DA FURNITURE" Rooftop
+    ['AttackDistance'] = 75, --Attack distance for "Attack!, Stab!, Gkill!" max distance
+    ['MutePremium'] = true, --Only for premium (this make ur stand cant be controlled by other premium)
+    ['TPMode'] = "Cart", --[Knock | Cart]
+    ['Smoothing'] = false, --[true | false] If [false] Less Delays And if [true] The Stand Movement Will Smooth But Kinda Delayed
+    ['CustomPrefix'] = '.', --[ ! | / | . | ? | > | < | $ | ; | : ] Custom target prefix
+    ['CustomSummon'] = 'Summon!', --Custom [Summon!] Text
+    ['SummonPoses'] = 'Pose1', --[false | Pose1 | Pose2 | Pose3]
+    ['LowGraphics'] = true, --[true | false] Turns graphics down so your stand doesnt lag too much
+    ['AntiStomp'] = true, --[true | false] The Stand Will Cannot Be Stomped Or Grabbed
+    ['CustomNAME'] = 'Master', --Custom Name Text Default Is [Master] Example Of it 'Im Here, Master'
+    ['Hidescreen'] = false, --[true | false] If [true] You WIll See White Blank Screen But The Performance Is Gonna Be Good]
+    ['ChatCmds'] = true, --[true | false] Chatted When You Use Some Command
+    ['MaskMode'] = 'Breathing', --[Surgeon | Paintball | Skull | Pumpkin | Hockey | Ninja | Riot | Breathing] The Stand Will Buy The Mask You Selected
+    ['AutoMask'] = true, --[true | false] Auto Buy Mask When The St    and Respawn
+    ['FPSCAP'] = false, --[false | 'NUMBER'] This is so your main account gets the most fps (MAXED IS 60, SUGGEST 30 FPS ON STANDS)
+    ['Msg'] = 'I have level 10 baldness.', --When You Say [/e msg] It Makes All The Alts Say That Message
+    ['Alt'] = false, --keep this false
+    --//    ! Sounds !     \\--
+    --\\ MUST HAVE BOOMBOX //--
+    ['Sounds'] = true, --[true | false]
+    ['CustomSong'] = 6703926669, --Enter A Song ID And Say 'Song!'
+    ['SummonMusic'] = true, --[true | false]
+    ['SummonMusicID'] = 'Default' -- Enter a Sound ID Put [Default] If You Would Like The Default Sound
+}loadstring(game:HttpGet("https://xk5ng.github.io/V4.6"))()
 
-repeat wait() until game.Players.LocalPlayer.Character
-url = "https://raw.githubusercontent.com/xennyy/Xenny-Ware/main/loader.lua"
-loadstring(game:HttpGet(url))()
-
-loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/dcd8a483a1ba00904cc3261a8299cfa1/raw/9a60d9c7c1f4749e6be2c27e2cdb80dec5cd8f2a/clickfling",true))()
-
-loadstring(game:HttpGet("https://scriptblox.com/raw/Prison-Life-Tiger-admin-free-10333"))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/I4MMO/Detazy/main/Main", true))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Yuri/main/Winterhub_V2.lua"))()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/pixelheadx/Polakya/main/Bestscript.md"))();
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/nyulachan/nyula/main/nyula", true))()    
-
-
-loadstring(game:HttpGet("https://pastebin.com/raw/DYNLmedT"))()
-lunar.vip
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/exquzy/asfa/main/qgqgqgqgqgqgqgqgqg",true))()
-yun v2
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/exquzy/asfa/main/xxxxx",true))()
-blazed
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Next1x/NextixHub/main/Loader"))()
-
-pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))() end)
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-
-getgenv().fps_cap = 60 --# FPS
-getgenv().disable_rendering = true --# Rendering // Saves CPU
-
-getgenv().farm = true --# Toggle
-loadstring(game:HttpGet('https://raw.githubusercontent.com/polarsblade/source/main/utilities/shotgun_autofarm'))()
-
-
+Create("Silent!", function()
+    print("Stand will look down to make it better")
+    getgenv().Silent = {
+        Settings = {
+            Enabled = true,
+            AimPart = "UpperTorso",
+            Prediction = 0.159748979134,
+            WallCheck = true,
+            Visualize = true,
+            AutoPrediction = true,
+        },
+        FOV = {
+            Enabled = true,
+            Size = 50,
+            Filled = false,
+            Thickness = 0.66,
+            Transparency = 0.9,
+            Color = Color3.fromRGB(255,255,255),
+        },
+    }
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CyberPlaysYT/Aura-x/main/Source", true))()
+end)
+    --\\-- ! Antilock ! --//--
+    ['SkyAmount'] = 1600, --Sky Velocity
+    --\\-- ! Misc ! --//--
+    ['AutoSaveLocation'] = '1', --[1 | 2]. '1' is bank food shop rooftop, '2' is "DA FURNITURE" Rooftop
+    ['AttackDistance'] = 75, --Attack distance for "Attack!, Stab!, Gkill!" max distance
+    ['MutePremium'] = true, --Only for premium (this make ur stand cant be controlled by other premium)
+    ['TPMode'] = "Cart", --[Knock | Cart]
+    ['Smoothing'] = false, --[true | false] If [false] Less Delays And if [true] The Stand Movement Will Smooth But Kinda Delayed
+    ['CustomPrefix'] = '.', --[ ! | / | . | ? | > | < | $ | ; | : ] Custom target prefix
+    ['CustomSummon'] = 'Crimson!', --Custom [Summon!] Text
+    ['SummonPoses'] = 'Pose3', --[false | Pose1 | Pose2 | Pose3]
+    ['LowGraphics'] = true, --[true | false] Turns graphics down so your stand doesnt lag too much
+    ['AntiStomp'] = true, --[true | false] The Stand Will Cannot Be Stomped Or Grabbed
+    ['CustomNAME'] = 'Master', --Custom Name Text Default Is [Master] Example Of it 'Im Here, Master'
+    ['Hidescreen'] = false, --[true | false] If [true] You WIll See White Blank Screen But The Performance Is Gonna Be Good]
+    ['ChatCmds'] = true, --[true | false] Chatted When You Use Some Command
+    ['MaskMode'] = 'Breathing', --[Surgeon | Paintball | Skull | Pumpkin | Hockey | Ninja | Riot | Breathing] The Stand Will Buy The Mask You Selected
+    ['AutoMask'] = true, --[true | false] Auto Buy Mask When The St    and Respawn
+    ['FPSCAP'] = false, --[false | 'NUMBER'] This is so your main account gets the most fps (MAXED IS 60, SUGGEST 30 FPS ON STANDS)
+    ['Msg'] = 'Yare Yare Daze.', --When You Say [/e msg] It Makes All The Alts Say That Message
+    ['Alt'] = false, --keep this false
+    --//    ! Sounds !     \\--
+    --\\ MUST HAVE BOOMBOX //--
+    ['Sounds'] = true, --[true | false]
+    ['CustomSong'] = 6703926669, --Enter A Song ID And Say 'Song!'
+    ['SummonMusic'] = true, --[true | false]
+    ['SummonMusicID'] = 'Default' -- Enter a Sound ID Put [Default] If You Would Like The Default Sound
+}loadstring(game:HttpGet("https://xk5ng.github.io/V4.6"))()
